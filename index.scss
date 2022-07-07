@@ -1,0 +1,47 @@
+$dark-theme-background-color: rgb(23, 25, 35);
+$dark-theme-font-color: white;
+$dark-theme-secondary-color: #00ffa5;
+$white-theme-background-color: white;
+$white-theme-headers-font-color: #282c34;
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $white-theme-background-color;
+    h1, h2, h3, h4, h5, h6{
+        color: $white-theme-headers-font-color;
+    }
+    .navbar--ul, .navbar--ul *{
+        display: none;
+        /* TODO: make this list a class for active Page*/
+        & li{
+            list-style: disc;
+            &::before{
+                content: "\2022";
+                color: $dark-theme-secondary-color;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }        
+    }
+    .itemSelected, .itemSelected *{
+        display: block;
+    }
+    ul, li{
+        list-style: none;
+    }
+    &.dark{
+        h1,h2,h3,h4,h5,h6{
+            color: white;
+        }
+        background-color: $dark-theme-background-color;
+        color: $dark-theme-font-color;
+        i{
+            color: white;
+        }
+    }
+}

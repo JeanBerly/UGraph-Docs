@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/2783fe946f.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="./bootstrap-grid.min.css">
+    <script defer src="./index.js"></script>
+    <script defer src="./navbarObserver.js"></script>
+    <title>Grafos Documentação</title>
+</head>
+<body class="container-fluid">
+    <!-- Header -->
+    <header class="row">
+        <div class="d-flex justify-content-between align-content-center menu col-10 mx-auto">
+            <h1 class="col-6">Ullas Graph Docs</h1>
+            <div class="d-flex justify-content-end align-content-center col-4">
+                <i id="iconThemeToggle" class="fa-solid fa-sun fa-xl my-auto mx-2" onclick="toggleTheme()"></i>
+                <i class="fa-solid fa-bars fa-xl my-auto"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar-->
+    <div class="row">
+        <div class="col-3">
+            <ul>
+                <li>
+                    <h2 onclick="setItemActive(this)">Item 1</h2>
+                    <ul class="navbar--ul itemSelected">
+                        <li>Item 1.2</li> 
+                    </ul>
+                </li>
+                <li>
+                    <h2 onclick="setItemActive(this)">Item 2</h2>
+                    <ul class="navbar--ul">
+                        <li>Item 2.3</li> 
+                    </ul>
+                </li>
+                <li>
+                    <h2 onclick="setItemActive(this)">Item 3</h2>
+                    <ul class="navbar--ul">
+                        <li>Item 3.1</li> 
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
