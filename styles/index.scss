@@ -33,7 +33,8 @@ body{
         color: $white-theme-headers-font-color;
     }
     .content{
-        width: 72ch;
+        margin: auto;
+        width: 60ch;
         word-wrap: break-word;
     }
     .documentation-topics{
