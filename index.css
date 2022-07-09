@@ -5,12 +5,44 @@ html, body {
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-10 {
+  border: 1px black solid;
+}
+
 body {
   background-color: white;
 }
 
+body .title {
+  color: #cc00ff !important;
+  font-weight: bold;
+}
+
+body .left-bar {
+  display: block;
+  height: 100vh;
+  position: fixed;
+}
+
+body .iconThemeToggle {
+  margin-top: 15px;
+}
+
 body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #282c34;
+}
+
+body .content {
+  width: 72ch;
+  word-wrap: break-word;
+}
+
+body .documentation-topics {
+  padding: 0;
 }
 
 body .navbar--ul, body .navbar--ul * {
@@ -24,7 +56,7 @@ body .navbar--ul li, body .navbar--ul * li {
 
 body .navbar--ul li::before, body .navbar--ul * li::before {
   content: "\2022";
-  color: #00ffa5;
+  color: #cc00ff;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -50,5 +82,11 @@ body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark 
 
 body.dark i {
   color: white;
+}
+
+@media (min-width: 991px) {
+  .content {
+    margin-left: 27%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,7 @@
 $dark-theme-background-color: rgb(23, 25, 35);
 $dark-theme-font-color: white;
 $dark-theme-secondary-color: #00ffa5;
+$secondary-color: #cc00ff;
 $white-theme-background-color: white;
 $white-theme-headers-font-color: #282c34;
 html, body{
@@ -8,10 +9,35 @@ html, body{
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-10{
+    border: 1px black solid;
+}
 body{
     background-color: $white-theme-background-color;
+    .title{
+        color: $secondary-color !important;
+        font-weight: bold;
+    }
+    .left-bar{
+        display: block;
+        height: 100vh;
+        position: fixed;
+    }
+    .iconThemeToggle{
+        margin-top: 15px;
+    }
     h1, h2, h3, h4, h5, h6{
         color: $white-theme-headers-font-color;
+    }
+    .content{
+        width: 72ch;
+        word-wrap: break-word;
+    }
+    .documentation-topics{
+        padding: 0;
     }
     .navbar--ul, .navbar--ul *{
         display: none;
@@ -20,7 +46,7 @@ body{
             list-style: disc;
             &::before{
                 content: "\2022";
-                color: $dark-theme-secondary-color;
+                color: $secondary-color;
                 font-weight: bold;
                 display: inline-block;
                 width: 1em;
@@ -43,5 +69,10 @@ body{
         i{
             color: white;
         }
+    }
+}
+@media (min-width: 991px) {
+    .content{
+        margin-left: 27%;
     }
 }
