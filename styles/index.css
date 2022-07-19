@@ -19,6 +19,21 @@ body {
   background-color: white;
 }
 
+body .imageContainer {
+  display: block;
+  width: 60ch;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+body .imageContainer img {
+  max-width: 100%;
+  border: 2px #cc00ff solid;
+  border-radius: 5px;
+}
+
 body .title {
   color: #cc00ff !important;
   font-weight: bold;
