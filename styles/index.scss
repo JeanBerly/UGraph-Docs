@@ -1,10 +1,11 @@
-$dark-theme-background-color: rgb(23, 25, 35);
+$dark-theme-background-color: #171923;
+$navbar-dark-theme-background-color: #12141c;
+$navbar-light-theme-background-color: #f0f0f0;
 $dark-theme-font-color: white;
-$dark-theme-secondary-color: #00ffa5;
 $secondary-color: #cc00ff;
 $white-theme-background-color: white;
 $white-theme-headers-font-color: #282c34;
-html, body{
+*, html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,8 +13,12 @@ html, body{
 a{
     text-decoration: none;
 }
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-10{
-    border: 1px black solid;
+ul{
+    & ul li{
+        margin-left: 20px;
+        padding-left: 15px;
+        padding-bottom: 0;
+    }
 }
 body{
     background-color: $white-theme-background-color;
@@ -21,10 +26,23 @@ body{
         color: $secondary-color !important;
         font-weight: bold;
     }
+    .menu{
+        border-radius: 20px;
+    }
     .left-bar{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 26vw;
         height: 100vh;
         position: fixed;
+        padding: 1em;
+        &, & nav{
+            background-color: $navbar-light-theme-background-color;
+        }
+    }
+    header::after{
+        clear: both;
     }
     .iconThemeToggle{
         margin-top: 15px;
@@ -35,7 +53,18 @@ body{
     .content{
         margin: auto;
         width: 60ch;
+        max-width: 95vw;
         word-wrap: break-word;
+    }
+    #navbarDocumentationTopicsMenuCopy{
+        width: 100vw;
+        height: fit-content;
+        &, & nav{
+            background-color: $navbar-light-theme-background-color;
+        }
+    }
+    header{
+        background-color: $navbar-light-theme-background-color;
     }
     .documentation-topics{
         padding: 0;
@@ -62,6 +91,9 @@ body{
         list-style: none;
     }
     &.dark{
+        .left-bar, nav{
+            background-color: $navbar-dark-theme-background-color;
+        }
         h1,h2,h3,h4,h5,h6{
             color: white;
         }
@@ -70,10 +102,23 @@ body{
         i{
             color: white;
         }
+        #navbarDocumentationTopicsMenuCopy{
+            &, & nav{
+                background-color: $navbar-dark-theme-background-color;
+            }
+        }
+        header{
+            background-color: $navbar-dark-theme-background-color;
+        }
     }
 }
 @media (min-width: 991px) {
     .content{
-        margin-left: 27%;
+        margin-left: 30% !important;
+    }
+}
+@media (max-width: 991px){
+    #navbarDocumentationTopicsMenuCopy{
+        display: none;
     }
 }

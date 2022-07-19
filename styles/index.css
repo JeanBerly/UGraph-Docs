@@ -1,4 +1,4 @@
-html, body {
+*, html, body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -9,8 +9,10 @@ a {
   text-decoration: none;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-10 {
-  border: 1px black solid;
+ul ul li {
+  margin-left: 20px;
+  padding-left: 15px;
+  padding-bottom: 0;
 }
 
 body {
@@ -22,10 +24,33 @@ body .title {
   font-weight: bold;
 }
 
+body .menu {
+  border-radius: 20px;
+}
+
 body .left-bar {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 26vw;
   height: 100vh;
   position: fixed;
+  padding: 1em;
+}
+
+body .left-bar, body .left-bar nav {
+  background-color: #f0f0f0;
+}
+
+body header::after {
+  clear: both;
 }
 
 body .iconThemeToggle {
@@ -39,7 +64,23 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 body .content {
   margin: auto;
   width: 60ch;
+  max-width: 95vw;
   word-wrap: break-word;
+}
+
+body #navbarDocumentationTopicsMenuCopy {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+body #navbarDocumentationTopicsMenuCopy, body #navbarDocumentationTopicsMenuCopy nav {
+  background-color: #f0f0f0;
+}
+
+body header {
+  background-color: #f0f0f0;
 }
 
 body .documentation-topics {
@@ -77,6 +118,10 @@ body.dark {
   color: white;
 }
 
+body.dark .left-bar, body.dark nav {
+  background-color: #12141c;
+}
+
 body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
   color: white;
 }
@@ -85,9 +130,23 @@ body.dark i {
   color: white;
 }
 
+body.dark #navbarDocumentationTopicsMenuCopy, body.dark #navbarDocumentationTopicsMenuCopy nav {
+  background-color: #12141c;
+}
+
+body.dark header {
+  background-color: #12141c;
+}
+
 @media (min-width: 991px) {
   .content {
-    margin-left: 27%;
+    margin-left: 30% !important;
+  }
+}
+
+@media (max-width: 991px) {
+  #navbarDocumentationTopicsMenuCopy {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */
