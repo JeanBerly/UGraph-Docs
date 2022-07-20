@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Item 1",
+        "childrens": [
+            "Item 1.1", "Item 1.2", "Item 1.3"
+        ]
+    },
+    {
+        "name": "Item 2",
+        "childrens": [
+            "Item 2.1",
+            "Item 2.2",
+            "Item 2.3"
+        ]
+    },
+    {
+        "name": "Item 3",
+        "childrens": [
+            "Item 3.1",
+            "Item 3.2",
+            "Item 3.3"
+        ]
+    }
+]

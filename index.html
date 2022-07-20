@@ -11,6 +11,7 @@
     <script defer src="./assets/scripts/toggleTheme.js"></script>
     <script defer src="./assets/scripts/navbarObserver.js"></script>
     <script defer src="./assets/scripts/toggleMenu.js"></script>
+    <script defer src="./assets/scripts/loadNavbars.js"></script>
     <title>UGraph Docs</title>
 </head>
 <body class="container-fluid">
@@ -18,28 +19,6 @@
         <i class="iconThemeToggle fa-solid fa-sun fa-xl d-none d-lg-block" onclick="toggleTheme()" style="position: absolute; right: 10px; top: 10px;"></i>
         <div class="left-bar d-none d-lg-block">
             <div class="col-12"></i><h1 class="title">UGraph Docs</h1></div>
-            <nav id="navbarDocumentationTopics">
-                <ul class="documentation-topics">
-                    <li>
-                        <h2 onclick="setItemActive(this)">Item 1</h2>
-                        <ul class="navbar--ul itemSelected">
-                            <li>Item 1.2</li> 
-                        </ul>
-                    </li>
-                    <li>
-                        <h2 onclick="setItemActive(this)">Item 2</h2>
-                        <ul class="navbar--ul">
-                            <li>Item 2.3</li> 
-                        </ul>
-                    </li>
-                    <li>
-                        <h2 onclick="setItemActive(this)">Item 3</h2>
-                        <ul class="navbar--ul">
-                            <li>Item 3.1</li> 
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
         </div>
         <div id="headerMobile" class="col-10 d-flex d-lg-none mx-auto px-8 items-center justify-content-between">
             <a href="#"><h1 class="d-block title">UGraph Docs</h1></a>
