@@ -37,7 +37,10 @@ async function renderNavbars(){
         let ul = createSubTopicUl();
         topic.childrens.forEach(subTopic => {
             let li = document.createElement("li");
-            li.textContent = subTopic;
+            let a = document.createElement("a");
+            a.href = `#${subTopic}`;
+            a.textContent = subTopic;
+            li.appendChild(a);
             ul.appendChild(li);
         });
 
@@ -58,7 +61,10 @@ async function renderNavbars(){
         let ul = createSubTopicUl();
         topic.childrens.forEach(subTopic => {
             let li = document.createElement("li");
-            li.textContent = subTopic;
+            let a  = document.createElement("a");
+            a.textContent = subTopic;
+            a.href = `#${subTopic}`;
+            li.appendChild(a);
             ul.appendChild(li);
         });
         topicListItem.appendChild(ul);
