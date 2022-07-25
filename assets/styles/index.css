@@ -1,8 +1,8 @@
+@charset "UTF-8";
 *, html, body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -18,7 +18,6 @@ ul ul li {
 body {
   background-color: white;
 }
-
 body .imageContainer {
   display: block;
   width: 60ch;
@@ -27,128 +26,97 @@ body .imageContainer {
   height: fit-content;
   margin: 0 auto;
 }
-
 body .imageContainer img {
   max-width: 100%;
   border: 2px #cc00ff solid;
   border-radius: 5px;
 }
-
 body .title {
   color: #cc00ff !important;
   font-weight: bold;
 }
-
 body .menu {
   border-radius: 20px;
 }
-
 body .left-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 26vw;
   height: 100vh;
   position: fixed;
   padding: 1em;
 }
-
 body .left-bar, body .left-bar nav {
   background-color: #f0f0f0;
 }
-
 body header::after {
   clear: both;
 }
-
 body .iconThemeToggle {
   margin-top: 15px;
 }
-
 body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #282c34;
 }
-
 body .content {
   margin: auto;
   width: 60ch;
   max-width: 95vw;
   word-wrap: break-word;
 }
-
-body #navbarDocumentationTopicsMenuCopy {
+body #navbarDocumentationTopicsMobile {
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-
-body #navbarDocumentationTopicsMenuCopy, body #navbarDocumentationTopicsMenuCopy nav {
+body #navbarDocumentationTopicsMobile, body #navbarDocumentationTopicsMobile nav {
   background-color: #f0f0f0;
 }
-
 body header {
   background-color: #f0f0f0;
 }
-
 body .documentation-topics {
   padding: 0;
 }
-
 body .navbar--ul, body .navbar--ul * {
   display: none;
   /* TODO: make this list a class for active Page*/
 }
-
 body .navbar--ul li, body .navbar--ul * li {
   list-style: disc;
 }
-
 body .navbar--ul li::before, body .navbar--ul * li::before {
-  content: "\2022";
+  content: "•";
   color: #cc00ff;
   font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
 }
-
 body .itemSelected, body .itemSelected * {
   display: block;
 }
-
 body ul, body li {
   list-style: none;
 }
-
 body.dark {
   background-color: #171923;
   color: white;
 }
-
 body.dark .left-bar, body.dark nav {
   background-color: #12141c;
 }
-
 body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
   color: white;
 }
-
 body.dark i {
   color: white;
 }
-
-body.dark #navbarDocumentationTopicsMenuCopy, body.dark #navbarDocumentationTopicsMenuCopy nav {
+body.dark #navbarDocumentationTopicsMobile, body.dark #navbarDocumentationTopicsMobile nav {
   background-color: #12141c;
 }
-
 body.dark header {
   background-color: #12141c;
 }
@@ -158,10 +126,8 @@ body.dark header {
     margin-left: 30% !important;
   }
 }
-
 @media (max-width: 991px) {
-  #navbarDocumentationTopicsMenuCopy {
+  #navbarDocumentationTopicsMobile {
     display: none;
   }
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

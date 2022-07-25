@@ -68,7 +68,7 @@ body{
         max-width: 95vw;
         word-wrap: break-word;
     }
-    #navbarDocumentationTopicsMenuCopy{
+    #navbarDocumentationTopicsMobile{
         width: 100vw;
         height: fit-content;
         &, & nav{
@@ -114,7 +114,7 @@ body{
         i{
             color: white;
         }
-        #navbarDocumentationTopicsMenuCopy{
+        #navbarDocumentationTopicsMobile{
             &, & nav{
                 background-color: $navbar-dark-theme-background-color;
             }
@@ -130,7 +130,7 @@ body{
     }
 }
 @media (max-width: 991px){
-    #navbarDocumentationTopicsMenuCopy{
+    #navbarDocumentationTopicsMobile{
         display: none;
     }
 }

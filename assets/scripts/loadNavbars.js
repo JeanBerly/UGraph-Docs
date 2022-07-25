@@ -27,6 +27,7 @@ let navbarTemplate =
 `
 async function renderNavbars(){
     let navbarInfo = await loadNavbarInfo();
+    // Navbar Desktop
     let navbarDesktop = document.createElement("nav");
     navbarDesktop.id = "navbarDocumentationTopics"
     let ulNavbarDesktop = createTopicsUl();
@@ -44,15 +45,33 @@ async function renderNavbars(){
         ulNavbarDesktop.appendChild(topicListItem);
         navbarDesktop.appendChild(ulNavbarDesktop);
     });
-    console.log(navbarDesktop);
     let targetNavbarDesktop = document.getElementsByClassName("left-bar")[0];
     targetNavbarDesktop.appendChild(navbarDesktop);
+    //
+    let navbarMobile = document.createElement("nav");
+    navbarMobile.id = "navbarDocumentationTopicsMobile";
+    navbarMobile.classList.add("d-lg-none");
+    let ulNavbarMobile = createTopicsUl();
+    navbarInfo.forEach(topic => {
+        let topicListItem = document.createElement("li");
+        topicListItem.appendChild(createTopicListElement(topic.name));
+        let ul = createSubTopicUl();
+        topic.childrens.forEach(subTopic => {
+            let li = document.createElement("li");
+            li.textContent = subTopic;
+            ul.appendChild(li);
+        });
+        topicListItem.appendChild(ul);
+        ulNavbarMobile.appendChild(topicListItem);
+        navbarMobile.appendChild(ulNavbarMobile);
+    });
+    let targetNavbarMobile = document.getElementById("mobileNavbarContainer");
+    targetNavbarMobile.appendChild(navbarMobile);
 }
 function createTopicListElement(name){
     let topicName = document.createElement("h2");
     topicName.textContent = name;
     topicName.setAttribute("onclick", "setItemActive(this)");
-    // TODO adicionar o evento onclick
     return topicName;
 }
 function createSubTopicUl(){
