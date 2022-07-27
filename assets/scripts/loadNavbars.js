@@ -1,5 +1,5 @@
 async function loadNavbarInfo() {
-    const response = await fetch('../assets/navbarinfo/navbar.json');
+    const response = await fetch('./assets/navbarinfo/navbar.json');
     const info = await response.json();
     return info;
 }
