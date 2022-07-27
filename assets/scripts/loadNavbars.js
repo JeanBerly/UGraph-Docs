@@ -1,14 +1,7 @@
 async function loadNavbarInfo() {
-    if (activeUl == "UGraph"){
-        const response = await fetch('./assets/navbarinfo/navbar.json');
-        const info = await response.json();
-        return info;
-    }
-    else{
-        const response = await fetch('../assets/navbarinfo/navbar.json');
-        const info = await response.json();
-        return info;
-    }
+    const response = await fetch('./assets/navbarinfo/navbar.json');
+    const info = await response.json();
+    return info;
 }
 async function renderNavbars(){
     let navbarInfo = await loadNavbarInfo();
@@ -23,8 +16,8 @@ async function renderNavbars(){
         topic.childrens.forEach(subTopic => {
             let li = document.createElement("li");
             let a = document.createElement("a");
-            a.href = `${topic.link}#${subTopic}`;
-            a.textContent = subTopic;
+            a.href = `${subTopic[1]}`;
+            a.textContent = subTopic[0];
             li.appendChild(a);
             ul.appendChild(li);
         });
@@ -47,8 +40,8 @@ async function renderNavbars(){
         topic.childrens.forEach(subTopic => {
             let li = document.createElement("li");
             let a  = document.createElement("a");
-            a.textContent = subTopic;
-            a.href = `${topic.link}#${subTopic}`;
+            a.href = `${subTopic[1]}`;
+            a.textContent = subTopic[0];
             li.appendChild(a);
             ul.appendChild(li);
         });

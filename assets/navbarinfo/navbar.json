@@ -2,51 +2,44 @@
     {
         "name": "UGraph",
         "childrens": [
-            "Proposta",
-            "Download",
-            "Extras"
-        ],
-        "link": "../index.html"
+            ["Proposta", "index-proposta.html"],
+            ["Download", "index-download.html"],
+            ["Extras", "index-extras.html"]
+        ]
     },
     {
         "name": "Getting Started",
         "childrens": [
-            "O que é um grafo",
-            "Introdução a classe grafo",
-            "Como usar"
-        ],
-        "link": "../pages/gettingstarted.html"
+            ["O que é um grafo", "gettingstarted-o-que-e.html"],
+            ["Introdução a classe grafo", "gettingstarted-introducao.html"],
+            ["Como usar", "gettingstarted-como-usar.html"]
+        ]
     },
     {
         "name": "Classe Grafo",
         "childrens": [
-            "O que é",
-            "Métodos"
-        ],
-        "link": "../pages/classegrafo.html"
+            ["O que é", "classegrafo-o-que-e.html"],
+            ["Métodos", "classegrafo-metodos.html"]
+        ]
     },
     {
         "name": "Lista de arestas",
         "childrens": [
-            "O que é",
-            "Métodos"
-        ],
-        "link": "../pages/listadearestas.html"
+            ["O que é", "listadearestas-o-que-e.html"],
+            ["Métodos", "listadearestas-metodos.html"]
+        ]
     },
     {
         "name": "Lista de adjacências",
         "childrens": [
-            "O que é",
-            "Métodos"
-        ],
-        "link": "../pages/listadeadjacencias.html"
+            ["O que é", "listadeadjacencias-o-que-e.html"],
+            ["Métodos", "listadeadjacencias-metodos.html"]
+        ]
     },
     {
-        "name": "Matriz de incidência",
         "childrens": [
-            "O que é",
-            "Métodos"
-        ],
-        "link": "../pages/matrizdeincidencia.html"
+            ["O que é", "matrizdeincidencia-o-que-e.html"],
+            ["Métodos", "matrizdeincidencia-metodos.html"]
+        ]
     }
 ]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Docs for UGraph Library made by Ulisses Rosa and Website made by JeanBerly">
+    <link type="text/css" rel="stylesheet" href="./assets/styles/index.css">
+    <script src="https://kit.fontawesome.com/2783fe946f.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/styles/bootstrap-grid.min.css">
+    <script defer src="./assets/scripts/toggleTheme.js"></script>
+    <script defer src="./assets/scripts/navbarObserver.js"></script>
+    <script defer src="./assets/scripts/toggleMenu.js"></script>
+    <script defer src="./assets/scripts/loadNavbars.js"></script>
+    <script>let activeUl = "Getting Started"</script>
+    <title>UGraph Docs</title>
+</head>
+
+<body class="container-fluid">
+    <header class="d-flex col-12 col-lg-3">
+        <i class="iconThemeToggle fa-solid fa-sun fa-xl d-none d-lg-block" onclick="toggleTheme()"
+            style="position: absolute; right: 10px; top: 10px;"></i>
+        <div class="left-bar d-none d-lg-block">
+            <div class="col-12"></i>
+                <h1 class="title">UGraph Docs</h1>
+            </div>
+        </div>
+        <div id="headerMobile" class="col-10 d-flex d-lg-none mx-auto px-8 items-center justify-content-between">
+            <a href="#">
+                <h1 class="d-block title">UGraph Docs</h1>
+            </a>
+            <div class="d-flex justify-content-end align-content-center">
+                <i class="iconThemeToggle fa-solid fa-sun fa-xl my-auto mx-2" onclick="toggleTheme()"></i>
+                <i class="fa-solid fa-bars fa-xl my-auto" onclick="toggleNavbar()"></i>
+            </div>
+        </div>
+    </header>
+    <div id="mobileNavbarContainer">
+
+    </div>
+    <div class="content">
+        <div class="d-flex menu col-12 justify-content-center py-2">
+            <a class="d-flex justify-content-between" href="https://github.com/RosaUlisses/My-Graph-Libray/">
+                <h2 class="d-flex" style="line-height: 32px;">Github repository<img id="githubIcon" class="my-auto mx-1"
+                        src="./assets/imgs/GitHub-Mark-32px.png" alt="Github icon"><i
+                        class="fa-link fa-solid my-auto fa-2xs"></i></h2>
+            </a>
+        </div>
+        <section id="O que é">
+            <h2>O que é</h2>
+            <p>A proposta de UGraph é ser uma biblioteca para auxiliar projetos que precisem de grafos</p>
+        </section>
+    </div>
+</body>
+
+</html>
