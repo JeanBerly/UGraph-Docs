@@ -1,7 +1,14 @@
 async function loadNavbarInfo() {
-    const response = await fetch('./assets/navbarinfo/navbar.json');
-    const info = await response.json();
-    return info;
+    if (activeUl == "UGraph"){
+        const response = await fetch('./assets/navbarinfo/navbar.json');
+        const info = await response.json();
+        return info;
+    }
+    else{
+        const response = await fetch('../assets/navbarinfo/navbar.json');
+        const info = await response.json();
+        return info;
+    }
 }
 async function renderNavbars(){
     let navbarInfo = await loadNavbarInfo();
