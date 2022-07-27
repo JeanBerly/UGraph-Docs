@@ -1,33 +1,10 @@
 async function loadNavbarInfo() {
-    const response = await fetch('./assets/navbarinfo/navbar.json');
+    const response = await fetch('../assets/navbarinfo/navbar.json');
     const info = await response.json();
     return info;
 }
-let navbarTemplate =
-    `
-<nav id="navbarDocumentationTopicsMenuCopy" class="d-lg-none">
-        <ul class="documentation-topics">
-            <li>
-                <h2 onclick="setItemActive(this)"></h2>
-                <ul class="navbar--ul itemSelected">
-                </ul>
-            </li>
-            <li>
-                <h2 onclick="setItemActive(this)"></h2>
-                <ul class="navbar--ul">
-                </ul>
-            </li>
-            <li>
-                <h2 onclick="setItemActive(this)"></h2>
-                <ul class="navbar--ul">
-                </ul>
-            </li>
-        </ul>
-    </nav>
-`
 async function renderNavbars(){
     let navbarInfo = await loadNavbarInfo();
-    // Navbar Desktop
     let navbarDesktop = document.createElement("nav");
     navbarDesktop.id = "navbarDocumentationTopics"
     let ulNavbarDesktop = createTopicsUl();
@@ -35,10 +12,11 @@ async function renderNavbars(){
         let topicListItem = document.createElement("li");
         topicListItem.appendChild(createTopicListElement(topic.name));
         let ul = createSubTopicUl();
+        if (topic.name == activeUl) ul.classList.add("itemSelected");
         topic.childrens.forEach(subTopic => {
             let li = document.createElement("li");
             let a = document.createElement("a");
-            a.href = `#${subTopic}`;
+            a.href = `${topic.link}#${subTopic}`;
             a.textContent = subTopic;
             li.appendChild(a);
             ul.appendChild(li);
@@ -63,7 +41,7 @@ async function renderNavbars(){
             let li = document.createElement("li");
             let a  = document.createElement("a");
             a.textContent = subTopic;
-            a.href = `#${subTopic}`;
+            a.href = `${topic.link}#${subTopic}`;
             li.appendChild(a);
             ul.appendChild(li);
         });

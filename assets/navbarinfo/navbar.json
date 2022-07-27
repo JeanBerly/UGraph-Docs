@@ -5,7 +5,8 @@
             "Proposta",
             "Download",
             "Extras"
-        ]
+        ],
+        "link": "../index.html"
     },
     {
         "name": "Getting Started",
@@ -13,34 +14,39 @@
             "O que é um grafo",
             "Introdução a classe grafo",
             "Como usar"
-        ]
+        ],
+        "link": "../pages/gettingstarted.html"
     },
     {
         "name": "Classe Grafo",
         "childrens": [
             "O que é",
             "Métodos"
-        ]
+        ],
+        "link": "../pages/gettingstarted.html"
     },
     {
         "name": "Lista de arestas",
         "childrens": [
             "O que é",
             "Métodos"
-        ]
+        ],
+        "link": "../pages/gettingstarted.html"
     },
     {
         "name": "Lista de adjacências",
         "childrens": [
             "O que é",
             "Métodos"
-        ]
+        ],
+        "link": "../pages/gettingstarted.html"
     },
     {
         "name": "Matriz de incidência",
         "childrens": [
             "O que é",
             "Métodos"
-        ]
+        ],
+        "link": "../pages/gettingstarted.html"
     }
 ]
