@@ -23,7 +23,7 @@
             "O que é",
             "Métodos"
         ],
-        "link": "../pages/gettingstarted.html"
+        "link": "../pages/classegrafo.html"
     },
     {
         "name": "Lista de arestas",
@@ -31,7 +31,7 @@
             "O que é",
             "Métodos"
         ],
-        "link": "../pages/gettingstarted.html"
+        "link": "../pages/listadearestas.html"
     },
     {
         "name": "Lista de adjacências",
@@ -39,7 +39,7 @@
             "O que é",
             "Métodos"
         ],
-        "link": "../pages/gettingstarted.html"
+        "link": "../pages/listadeadjacencias.html"
     },
     {
         "name": "Matriz de incidência",
@@ -47,6 +47,6 @@
             "O que é",
             "Métodos"
         ],
-        "link": "../pages/gettingstarted.html"
+        "link": "../pages/matrizdeincidencia.html"
     }
 ]
