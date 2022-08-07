@@ -27,13 +27,11 @@ ul{
 body{
     .imageContainer{
         display: block;
-        width: 60ch;
+        max-width: 60ch;
         height: fit-content;
         margin: 15px auto;
         & img{
             max-width: 100%;
-            border: 2px $secondary-color solid;
-            border-radius: 5px;
         }
         
     }
